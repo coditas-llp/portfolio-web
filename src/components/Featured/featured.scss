@@ -1,0 +1,52 @@
+@import url("../../fonts.scss");
+
+.blog-container {
+  .top-section {
+    max-height: 80vh;
+    position: relative;
+    overflow: hidden;
+    .left-section {
+      z-index: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+      position: absolute;
+      height: 100%;
+      padding-left: 120px;
+      .title-text {
+        font-family: "Montserrat";
+        font-size: 1.62rem;
+        max-width: 900px;
+        color: #ffffff;
+      }
+      .publish-date {
+        color: #ffffff;
+        font-family: "Roboto";
+        font-size: 1.62rem;
+        h4 {
+          font-weight: 300;
+        }
+      }
+      .read-blog {
+        padding: 15px;
+        max-width: 100px;
+        display: flex;
+        color: #fff;
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+        align-items: center;
+        font-family: "Roboto";
+        font-weight: 500;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .featured-big-banner {
+      width: 100%;
+    }
+  }
+}
+
+
