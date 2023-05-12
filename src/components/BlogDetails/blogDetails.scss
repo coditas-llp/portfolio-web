@@ -1,0 +1,59 @@
+.blog-content {
+  .blog-banner {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    align-items: center;
+
+
+    .blog-details-image {
+      max-height: 90vh;
+      overflow: hidden;
+      min-width: 100%;
+
+      img {
+        max-height: 90vh;
+        overflow: hidden;
+        min-width: 100%;
+      }
+    }
+
+    .blog-text {
+      position: absolute;
+      color: white;
+      padding-left: 120px;
+
+      .blog-sub-title {
+        letter-spacing: 0.25px;
+      }
+    }
+  }
+
+  .blue-banner {
+    // position: absolute;
+    background: #07172d;
+    bottom: -100px;
+    width: 100%;
+    min-height: 100px;
+    color: white;
+
+    .tech-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 25px;
+
+      .tech-heading {
+        color: #999999;
+      }
+
+      .tech-name {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .blog-details {
+    padding: 50px;
+    // margin-top: 120px;
+  }
+}
