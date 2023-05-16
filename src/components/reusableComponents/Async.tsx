@@ -1,11 +1,10 @@
-import { Footer, NavBar } from "coditas-ui";
+import { Footer, HeroSection, NavBar } from "coditas-ui";
 import { useEffect, useState } from "react";
-import { Loader } from "./Loader";
-import logoWhite from './coditas_white.png';
-import logoBlue from './coditas_blue.png';
-
-
 import { GET } from "../../HTTP";
+import needHelp from '../../assets/needHelp.png';
+import rightArrow from '../../assets/rightArrow.svg';
+import { Loader } from "./Loader";
+
 interface IAsyncProps {
   promise: () => void;
   loader?: JSX.Element;
@@ -30,7 +29,7 @@ export const Async = (props: IAsyncProps) => {
     const response = await GET('/get-content?name=header-menus')
     const items = response.data.map((linkItem: INavItem) => {
       const nav_link = linkItem.link_url?.split('/') || ''
-      
+
       return {
         ...linkItem, link_url: `/${nav_link[nav_link?.length - 1]}`
       }
@@ -57,22 +56,33 @@ export const Async = (props: IAsyncProps) => {
   }, []);
   return (
     <div>
-
       {isLoading && <Loader />}
       {!isLoading && !hasError &&
         <>
           <NavBar
-            logoBlue={logoBlue}
+            // logoBlue={logoBlue}
             bgColor="transparent"
-            logoWhite={logoWhite}
+            // logoWhite={logoWhite}
             menuItems={navItems.map((navItem: INavItem) => ({ label: navItem.link_name, route: navItem.link_url })) as any}
           />
           {props.content}
+          <HeroSection
+            bgImg={needHelp}
+            heading="Need help with your business?"
+            paragraph="Don’t worry , we got your back "
+            buttonStyle={{
+              background: "transparent",
+              borderRadius: "4px",
+              color: "#ffffff",
+            }}
+            buttonRoute="/contact-us"
+            buttonText="Contact Us"
+            buttonIcon={rightArrow}
+          />
           <Footer />
         </>
       }
       {hasError && !isLoading && props.error}
-
     </div>
   );
 };

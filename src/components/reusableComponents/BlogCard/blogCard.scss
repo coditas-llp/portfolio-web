@@ -48,13 +48,16 @@
       color: #2C74D6;
       margin-top: 20px;
       border-radius: 4px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .blog-date {
       color: #555555;
-      margin-left: 16px;
       font-family: "Roboto";
+      margin-top: 15px;
     }
   }
 }
-
