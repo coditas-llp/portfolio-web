@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-export const BASE_URL = 'https://careers.coditas.com'
-export const API_URL = 'https://careers.coditas.com/api/v1'
+export const BASE_URL = 'https://cms.coditas.com'
+export const API_URL = 'https://cms.coditas.com/cms/v1'
 
 export const GET = async (URL: string) => {
     try {
