@@ -19,6 +19,26 @@ interface INavItem {
   route: string;
 }
 
+const nav = [{
+  label: 'Services',
+  route: '#services'
+},
+{
+  label: 'Portfolio',
+  route: '/',
+  activeRoute: true,
+},
+{
+  label: 'Careers',
+  route: '',
+  href: 'https://careers.coditas.com/'
+},
+{
+  label: 'Contact Us',
+  href: 'https://coditas.com/#/contactus'
+}]
+
+
 export const Async = (props: IAsyncProps) => {
   const [isLoading, setLoading] = useState(true);
   const [hasError, setError] = useState(false);
@@ -29,7 +49,6 @@ export const Async = (props: IAsyncProps) => {
     const response = await GET('/get-content?name=header-menus')
     const items = response.data.map((linkItem: INavItem) => {
       const nav_link = linkItem.link_url?.split('/') || ''
-
       return {
         ...linkItem, link_url: `/${nav_link[nav_link?.length - 1]}`
       }
@@ -60,10 +79,11 @@ export const Async = (props: IAsyncProps) => {
       {!isLoading && !hasError &&
         <>
           <NavBar
-            // logoBlue={logoBlue}
             bgColor="transparent"
-            // logoWhite={logoWhite}
-            menuItems={navItems.map((navItem: INavItem) => ({ label: navItem.link_name, route: navItem.link_url })) as any}
+            onLogoClicked={() => {
+              window.open('https://coditas.com', '_self')
+            }}
+            menuItems={nav}
           />
           {props.content}
           <HeroSection
