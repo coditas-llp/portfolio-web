@@ -8,7 +8,8 @@ import "./featured.scss";
 interface IFeaturedProps {
   featuredBlog?: IBlog;
   blogsData?: IBlog[]
-  onClick?: (path: string) => void
+  onClickFeatured?: (path: string) => void
+  onClickCard?: (path: string) => void
 }
 
 export const Featured = (props: IFeaturedProps) => {
@@ -20,7 +21,7 @@ export const Featured = (props: IFeaturedProps) => {
         <div className="top-section">
           <div className="left-section">
             <FeatureDetails
-              onClick={() => props?.onClick && props?.onClick(`/${props.featuredBlog?.id}`)}
+              onClick={() => props?.onClickFeatured && props?.onClickFeatured(`/${props.featuredBlog?.id}`)}
               published_on={featuredBlog?.published_on}
               titleText={featuredBlog?.blog_title}
             />
@@ -32,7 +33,7 @@ export const Featured = (props: IFeaturedProps) => {
         </div>
       </div>
       <div className="blog-cards">
-        {blogsData?.map((blog, index) => < BlogCard key={index} blogData={blog} />)}
+        {blogsData?.map((blog, index) => <BlogCard onClickCard={props.onClickCard} key={index} blogData={blog} />)}
       </div>
     </div>
   );
