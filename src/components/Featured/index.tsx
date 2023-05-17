@@ -1,19 +1,18 @@
-import { useNavigate } from "react-router";
+import React from "react";
 import { IBlog } from "../../interfaces";
 import { formatDate } from "../../utils/generalUtils";
 import { BlogCard } from "../reusableComponents/BlogCard";
 import { Image } from "../reusableComponents/Image";
 import "./featured.scss";
-import "./featuredMediaQueries.scss";
 
 interface IFeaturedProps {
   featuredBlog?: IBlog;
+  blogsData?: IBlog[]
+  onClick?: (path: string) => void
 }
 
 export const Featured = (props: IFeaturedProps) => {
-  const { featuredBlog } = props;
-  console.log(">> props", props);
-  const navigate = useNavigate()
+  const { featuredBlog, blogsData } = props;
   return (
     <div>
 
@@ -21,7 +20,7 @@ export const Featured = (props: IFeaturedProps) => {
         <div className="top-section">
           <div className="left-section">
             <FeatureDetails
-              onClick={() => navigate(`/${props.featuredBlog?.id}`)}
+              onClick={() => props?.onClick && props?.onClick(`/${props.featuredBlog?.id}`)}
               published_on={featuredBlog?.published_on}
               titleText={featuredBlog?.blog_title}
             />
@@ -33,7 +32,7 @@ export const Featured = (props: IFeaturedProps) => {
         </div>
       </div>
       <div className="blog-cards">
-        <BlogCard blogData={featuredBlog} />
+        {blogsData?.map((blog, index) => < BlogCard key={index} blogData={blog} />)}
       </div>
     </div>
   );

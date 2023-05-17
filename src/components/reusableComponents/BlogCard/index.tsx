@@ -1,21 +1,20 @@
-import { useNavigate } from "react-router";
+import React from "react";
 import { IBlog } from "../../../interfaces";
+import { formatDate } from "../../../utils/generalUtils";
 import { Image } from "../Image";
 import "./blogCard.scss";
-import "./blogCardMediaQueries.scss";
-import { formatDate } from "../../../utils/generalUtils";
 
 interface IBlogCardProps {
   blogData?: IBlog;
+  onClickCard?: (path: string) => void
 }
 
 export const BlogCard = (props: IBlogCardProps) => {
-  const navigate = useNavigate();
   console.log(">> props", props);
   return (
     <div
       className="card-container"
-      onClick={() => navigate(props?.blogData?.id as any)}
+      onClick={() => props.onClickCard && props.onClickCard(props?.blogData?.id as any)}
     >
       <div className="card-image">
         <Image

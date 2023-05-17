@@ -3,7 +3,7 @@ import './image.scss'
 import { getFullUrl } from '../../../utils/generalUtils'
 
 export const Image = (props: { desktop_src?: string; mobile_src?: string; className?: string }) => {
-    return <>
+    return <div>
         <img
             src={getFullUrl(props.desktop_src)}
             className="card-blog-image desktop"
@@ -14,5 +14,5 @@ export const Image = (props: { desktop_src?: string; mobile_src?: string; classN
             className={`card-blog-image mobile ${props.className}`}
             alt="blog-card mobile"
         />
-    </>
+    </div>
 }

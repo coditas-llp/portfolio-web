@@ -13,7 +13,8 @@ export interface IBlog {
     blog_content?: string
     card_subtitle?: string
     id?: string
-    is_featured?: boolean
+    is_featured?: boolean;
+    env?: string
 }
 
 interface IImageURL {
