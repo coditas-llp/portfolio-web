@@ -1,8 +1,8 @@
 import { useState } from "react";
 
+import queryString from 'query-string';
 import React from "react";
 import MarkdownRenderer from "react-markdown-renderer";
-import { useParams } from "react-router";
 import { GET } from "../../HTTP";
 import { IBlog } from "../../interfaces";
 import { Async } from "../reusableComponents/Async";
@@ -11,10 +11,10 @@ import "./blogDetails.scss";
 
 export const BlogDetails = (props?: IBlog) => {
   const [blogData, setBlogData] = useState<IBlog>({});
-  const { blog_id } = useParams();
+  const { id } = queryString.parse(location.search);
 
   const promise = async () => {
-    const data = await GET(`/get-content??name=blogs&env=${props?.env}&showId=true&id=${blog_id}`);
+    const data = await GET(`/get-content?name=blogs&showId=true&id=${id || props?.id}`);
     setBlogData(data.data);
   };
 
