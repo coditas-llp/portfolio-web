@@ -15,7 +15,6 @@
     "axios": "^1.4.0",
     "coditas-ui": "^1.0.72",
     "date-fns": "^2.30.0",
-    "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown-renderer": "^1.4.0",
