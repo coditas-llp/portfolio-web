@@ -1,37 +1,39 @@
 import React from "react";
 import { IBlog } from "../../../interfaces";
-import { formatDate } from "../../../utils/generalUtils";
 import { Image } from "../Image";
 import "./blogCard.scss";
 
 interface IBlogCardProps {
-  blogData?: IBlog;
-  onClickCard?: (path: string) => void
+  blogData: IBlog;
+  onClickCard: (path: string) => void
 }
 
-export const BlogCard = (props: IBlogCardProps) => {
-  console.log(">> props", props);
+export const BlogCard = (props: IBlogCardProps) => {̦
   return (
-    <div
-      className="card-container"
-      onClick={() => props.onClickCard && props.onClickCard(props?.blogData?.id as any)}
-    >
+    <div className="card-container">
       <div className="card-image">
         <Image
           desktop_src={props.blogData?.banner_small?.url}
           mobile_src={props.blogData?.mobile_card?.url}
         />
+        <span className="env">Devops</span>
       </div>
-      <div className="bottom-content" >
+      <div className="bottom-content">
         <div className="blog-title">{props?.blogData?.blog_title}</div>
-        <div className="blog-date">{formatDate(props.blogData?.published_on)}</div>
         <div className="line" />
-        <div className="r-font card-sub" >
-          {props.blogData?.card_subtitle}
-        </div>
-        <div className="more-button r-font" >
+        <div className="r-font card-sub">{props.blogData?.card_subtitle}</div>
+        <div
+          className="more-button r-font"
+          onClick={() => props?.onClickCard && props?.onClickCard(props?.blogData?.id as any)}
+        >
           Read more
         </div>
+        <span
+          className="mob-read-more"
+          onClick={() => props?.onClickCard && props?.onClickCard(props?.blogData?.id as any)}
+        >
+          Read more
+        </span>
       </div>
     </div>
   );

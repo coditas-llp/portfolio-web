@@ -38,7 +38,10 @@ function BlogsApp(props: IPortfolioProps) {
       <Async
         promise={getData}
         content={
-          <Featured {...props} blogsData={blogs} featuredBlog={blogs.find((blog) => blog.is_featured)} />
+          <Featured
+            featuredBlog={blogs.find((blog) => blog.is_featured)}
+            blogs={blogs}
+          />
         }
       />
     </div>
