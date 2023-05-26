@@ -132,6 +132,10 @@
     flex-direction: column !important;
   }
 
+  .challenges {
+    flex-direction: column !important;
+  }
+
   .m-top {
     margin-top: calc(50% - 60px);
   }
@@ -149,6 +153,10 @@
     flex-direction: column !important;
   }
 
+  .challenges {
+    flex-direction: column !important;
+  }
+
   .m-top {
     margin-right: 1px;
   }
@@ -157,6 +165,10 @@
 // IPhone SE to Small Screen Device
 
 @media screen and (max-height: 680px) and (max-width: 380px) and (orientation: portrait) {
+
+  .challenges {
+    flex-direction: column !important;
+  }
 
   .challenges {
     flex-direction: column !important;
