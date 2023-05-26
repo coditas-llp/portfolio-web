@@ -1,6 +1,6 @@
 {
   "name": "coditas-portfolio",
-  "version": "1.0.21",
+  "version": "1.0.31",
   "description": "Coditas Portfolio",
   "author": "Harish Soni",
   "repository": {
@@ -82,6 +82,7 @@
   ],
   "dependencies": {
     "axios": "^1.4.0",
+    "coditas-ui": "^1.0.98",
     "date-fns": "^2.30.0",
     "node-sass": "^6.0.1",
     "query-string": "^8.1.0",
