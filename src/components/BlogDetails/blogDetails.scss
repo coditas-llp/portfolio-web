@@ -1,4 +1,4 @@
-@mixin fontStyle() {
+@mixin textStyle() {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -63,7 +63,7 @@
       }
 
       .tech-name {
-        @include fontStyle();
+        @include textStyle();
         margin-top: 20px;
         line-height: 150%;
         letter-spacing: 0.25px;
@@ -178,7 +178,7 @@
           font-size: 1.25rem;
         }
         p {
-          @include fontStyle();
+          @include textStyle();
           letter-spacing: 0.5px;
           text-transform: capitalize;
           color: #07172d;
@@ -188,7 +188,7 @@
           grid-template-columns: 1fr 1fr;
           grid-column-gap: 16px;
           li {
-            @include fontStyle();
+            @include textStyle();
             font-size: 16px;
             color: #333333;
           }
@@ -205,12 +205,12 @@
           font-size: 1.25rem;
         }
         p {
-          @include fontStyle();
+          @include textStyle();
           letter-spacing: 0.5px;
           color: #07172d;
         }
         li {
-          @include fontStyle();
+          @include textStyle();
           color: #333333;
         }
       }
