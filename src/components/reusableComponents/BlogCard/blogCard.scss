@@ -1,17 +1,14 @@
 .card-container {
-  margin: 30px;
   border: 1px solid #e4eaf2;
   border-radius: 16px;
   max-width: 584px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   text-align: left;
   height: 517px;
-
   .card-image {
     position: relative;
   }
-
   .env {
     position: absolute;
     right: 22px;
@@ -23,7 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Roboto";
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -31,7 +28,6 @@
     letter-spacing: 0.25px;
     color: #222222;
   }
-
   .card-blog-image {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
@@ -50,7 +46,7 @@
     }
 
     .r-font.card-sub {
-      font-family: "Roboto";
+      font-family: 'Roboto';
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
@@ -65,7 +61,7 @@
     }
 
     .blog-title {
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-style: normal;
       font-weight: 700;
       line-height: 120%;
@@ -91,32 +87,27 @@
         cursor: pointer;
       }
     }
-
     .mob-read-more {
       display: none;
     }
 
     .blog-date {
       color: #555555;
-      font-family: "Roboto";
+      font-family: 'Roboto';
       margin-top: 15px;
     }
   }
 }
-
 @media screen and (min-width: 320px) and (max-width: 720px) {
   .card-container {
     height: auto !important;
-
     .card-blog-image {
       height: auto !important;
     }
-
     .bottom-content {
       .more-button {
         display: none;
       }
-
       .mob-read-more {
         display: block;
         font-weight: 700;
@@ -129,7 +120,6 @@
         margin-top: 20px;
         border-radius: 4px;
         width: 100%;
-
         &:hover {
           cursor: pointer;
         }
@@ -137,7 +127,6 @@
     }
   }
 }
-
 // IPhone XR to Laarge Screen Device
 @mixin h1FS($reduceBY) {
   .card-container {
