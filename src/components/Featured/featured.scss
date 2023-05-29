@@ -17,20 +17,6 @@
       }
       div {
         width: 100%;
-        .title-text {
-          font-family: 'Montserrat';
-          font-size: 1.62rem;
-          max-width: 900px;
-          .title-h1 {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 3rem;
-            line-height: 120%;
-            letter-spacing: 0.031rem;
-            color: #ffffff;
-          }
-        }
       }
       .publish-date {
         color: #ffffff;
@@ -85,12 +71,6 @@
         div {
           width: 100%;
           height: 35vh;
-          .title-text {
-            font-size: 0.7rem;
-            .title-h1 {
-              font-size: 32px;
-            }
-          }
         }
       }
     }
@@ -105,25 +85,19 @@
 }
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   .blog-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    @include gridLayout();
     padding: 64px 128px;
     align-items: center;
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
   }
 }
 @media screen and (min-width: 1450px) {
   .blog-cards {
     width: 1180px;
     margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    @include gridLayout();
     padding-top: 64px;
     padding-bottom: 64px;
     align-items: center;
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
   }
 }
 // IPhone XR to Laarge Screen Device

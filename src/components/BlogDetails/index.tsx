@@ -11,9 +11,10 @@ export const BlogDetails = (props?: IBlog) => {
   const [blogData, setBlogData] = useState<IBlog>({})
   const { id } = queryString.parse(location.search)
 
-
   const promise = async () => {
-    const data = await GET(`/get-content?name=blogs&showId=true&id=${id || props?.id}`);
+    const data = await GET(
+      `/get-content?name=blogs&showId=true&id=${id || props?.id}`
+    )
     setBlogData(data.data)
   }
 
@@ -64,7 +65,7 @@ const BlogContent = (props?: IBlog) => {
 const TechLine = ({ text, heading }: { heading?: string; text?: string }) => {
   return (
     <div className='tech-line'>
-      <div className='tech-heading'>{heading}</div>
+      <div className='tech-heading m-font'>{heading}</div>
       <div className='tech-name'>{text}</div>
     </div>
   )

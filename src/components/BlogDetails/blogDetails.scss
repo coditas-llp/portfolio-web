@@ -1,3 +1,10 @@
+@mixin fontStyle() {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
 .blog-content {
   .blog-banner {
     display: flex;
@@ -35,7 +42,6 @@
   }
 
   .blue-banner {
-    // position: absolute;
     background: #07172d;
     bottom: -100px;
     width: 100%;
@@ -49,7 +55,6 @@
 
       .tech-heading {
         color: #999999;
-        font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
         font-size: 12px;
@@ -58,11 +63,8 @@
       }
 
       .tech-name {
+        @include fontStyle();
         margin-top: 20px;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
         line-height: 150%;
         letter-spacing: 0.25px;
       }
@@ -176,11 +178,7 @@
           font-size: 1.25rem;
         }
         p {
-          font-family: 'Roboto';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 28px;
+          @include fontStyle();
           letter-spacing: 0.5px;
           text-transform: capitalize;
           color: #07172d;
@@ -190,11 +188,8 @@
           grid-template-columns: 1fr 1fr;
           grid-column-gap: 16px;
           li {
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 400;
+            @include fontStyle();
             font-size: 16px;
-            line-height: 28px;
             color: #333333;
           }
         }
@@ -210,20 +205,12 @@
           font-size: 1.25rem;
         }
         p {
-          font-family: 'Roboto';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 28px;
+          @include fontStyle();
           letter-spacing: 0.5px;
           color: #07172d;
         }
         li {
-          font-family: 'Roboto';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 28px;
+          @include fontStyle();
           color: #333333;
         }
       }

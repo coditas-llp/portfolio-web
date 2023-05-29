@@ -10,16 +10,16 @@ interface IBlogCardProps {
 
 export const BlogCard = (props: IBlogCardProps) => {
   return (
-    <div className='card-container'>
+    <div className='card-container m-font'>
       <div className='card-image'>
         <Image
           desktop_src={props.blogData?.banner_small?.url}
           mobile_src={props.blogData?.mobile_card?.url}
         />
-        <span className='env'>{props?.blogData?.env}</span>
+        <span className='env r-font'>{props?.blogData?.cardBadgeText}</span>
       </div>
       <div className='bottom-content'>
-        <div className='blog-title'>{props?.blogData?.blog_title}</div>
+        <div className='blog-title m-font'>{props?.blogData?.blog_title}</div>
         <div className='line' />
         <div className='r-font card-sub'>{props.blogData?.card_subtitle}</div>
         <div
@@ -31,7 +31,7 @@ export const BlogCard = (props: IBlogCardProps) => {
           Read more
         </div>
         <span
-          className='mob-read-more'
+          className='mob-read-more r-font'
           onClick={() =>
             props?.onClickCard && props?.onClickCard(props?.blogData?.id as any)
           }
