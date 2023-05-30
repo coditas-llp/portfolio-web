@@ -16,7 +16,7 @@ export const BlogCard = (props: IBlogCardProps) => {
           desktop_src={props.blogData?.banner_small?.url}
           mobile_src={props.blogData?.mobile_card?.url}
         />
-        <span className='env r-font'>{props?.blogData?.cardBadgeText}</span>
+        <span className='env r-font'>{props?.blogData?.card_badge_text}</span>
       </div>
       <div className='bottom-content'>
         <div className='blog-title m-font'>{props?.blogData?.blog_title}</div>

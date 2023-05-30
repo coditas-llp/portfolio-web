@@ -18,7 +18,7 @@ export interface IBlog {
   solution?: string
   env?: string
   gradient?: string
-  cardBadgeText?: string
+  card_badge_text?: string
 }
 
 interface IImageURL {
