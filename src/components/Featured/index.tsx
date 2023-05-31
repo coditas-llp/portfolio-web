@@ -4,6 +4,7 @@ import { BlogCard } from '../reusableComponents/BlogCard'
 import './featured.scss'
 import { HeroSection } from 'coditas-ui'
 import { BASE_URL } from '../../HTTP'
+import { useNavigate } from 'react-router'
 
 interface IFeaturedProps {
   featuredBlog?: IBlog
@@ -14,6 +15,7 @@ interface IFeaturedProps {
 
 export const Featured = (props: IFeaturedProps) => {
   const { featuredBlog, blogs } = props
+  const navigate = useNavigate()
   return (
     <div>
       <div className='blog-container'>
@@ -34,7 +36,10 @@ export const Featured = (props: IFeaturedProps) => {
           return (
             !item?.is_featured && (
               <div key={i}>
-                <BlogCard onClickCard={() => {}} blogData={item} />
+                <BlogCard
+                  onClickCard={(id: any) => navigate(`/${id}`)}
+                  blogData={item}
+                />
               </div>
             )
           )
