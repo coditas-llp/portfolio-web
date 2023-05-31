@@ -37,7 +37,7 @@ export const Featured = (props: IFeaturedProps) => {
             !item?.is_featured && (
               <div key={i}>
                 <BlogCard
-                  onClickCard={(id: any) => navigate(`/${id}`)}
+                  onClickCard={(id: any) => navigate(`/portfolio/${id}`)}
                   blogData={item}
                 />
               </div>
