@@ -1,6 +1,6 @@
 {
   "name": "coditas-portfolio",
-  "version": "1.0.31",
+  "version": "1.0.37",
   "description": "Coditas Portfolio",
   "author": "Harish Soni",
   "repository": {
@@ -75,7 +75,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
-    "typescript": "^5.0.4"
+    "typescript": "^4.9.5"
   },
   "files": [
     "dist"
