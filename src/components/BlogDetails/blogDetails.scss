@@ -79,8 +79,9 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .blog-content {
     .blog-details {
-      padding: 88px 16px 64px 16px;
+      padding: 64px 16px 64px 16px;
       row-gap: 0 !important;
+      line-height: 28px;
       .challenges {
         flex-direction: column !important;
         .markdown {
@@ -184,9 +185,8 @@
           color: #07172d;
         }
         ul {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-column-gap: 16px;
+          display: flex;
+          flex-direction: column;
           li {
             @include textStyle();
             font-size: 16px;
@@ -197,10 +197,9 @@
     }
     .challenges {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       column-gap: 16px;
       .markdown {
-        width: 50%;
         h3 {
           font-size: 1.25rem;
         }
