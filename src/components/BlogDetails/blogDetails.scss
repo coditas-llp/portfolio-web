@@ -79,8 +79,9 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .blog-content {
     .blog-details {
-      padding: 88px 16px 64px 16px;
+      padding: 64px 16px 64px 16px;
       row-gap: 0 !important;
+      line-height: 28px;
       .challenges {
         flex-direction: column !important;
         .markdown {
