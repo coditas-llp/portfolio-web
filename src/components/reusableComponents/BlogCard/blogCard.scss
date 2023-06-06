@@ -115,7 +115,6 @@
       }
       .mob-read-more {
         @include btnStyle();
-        display: block;
         font-size: 12px;
         justify-content: flex-end;
         align-items: flex-end;
