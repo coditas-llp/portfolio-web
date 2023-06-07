@@ -26,7 +26,8 @@ export const Featured = (props: IFeaturedProps) => {
                 (featuredBlog?.blog_title && featuredBlog?.blog_title) || ''
               }
               bgImg={`${BASE_URL}${featuredBlog?.banner_big?.url}`}
-              overlay='#111111'
+              overlay='true'
+              gradient={featuredBlog?.gradient}
             />
           </div>
         </div>
