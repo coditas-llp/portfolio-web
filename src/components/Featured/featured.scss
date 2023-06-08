@@ -93,7 +93,6 @@
   .blog-cards {
     @include gridLayout();
     padding: 64px 128px;
-    align-items: center;
   }
 }
 @media screen and (min-width: 1450px) {
@@ -103,7 +102,6 @@
     @include gridLayout();
     padding-top: 64px;
     padding-bottom: 64px;
-    align-items: center;
   }
 }
 // IPhone XR to Laarge Screen Device
