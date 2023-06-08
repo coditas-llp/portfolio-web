@@ -12,7 +12,7 @@
   max-width: 584px;
   font-style: normal;
   text-align: left;
-  height: 517px;
+  height: auto;
   .card-image {
     position: relative;
   }
@@ -46,12 +46,12 @@
 
     .line {
       width: 100%;
-      margin: 15px 0px;
+      margin: 16px 0px;
       border: 1px solid;
       border-color: #eeeeee;
     }
 
-    .r-font .card-sub {
+    .card-sub {
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
@@ -76,7 +76,6 @@
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      height: 38px;
       text-overflow: ellipsis
     }
 

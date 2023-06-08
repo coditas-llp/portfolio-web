@@ -36,12 +36,10 @@ export const Featured = (props: IFeaturedProps) => {
         {blogs?.map((item: any, i: number) => {
           return (
             !item?.is_featured && (
-              <div key={i}>
                 <BlogCard
                   onClickCard={(id: any) => navigate(`/portfolio/${id}`)}
                   blogData={item}
                 />
-              </div>
             )
           )
         })}
